@@ -1,0 +1,32 @@
+1. Returns Breakfast because the code within the method defination of meal returns the string Breakfast.
+2. Returns Evening because the code within the method deifnitation of meal returns the string Breakfast even without return given that it is the last line of the method.
+3. Returns Breakfast because the code within the method deifnitation of meal returns the string Breakfast even without it being the last line given that return exits the method.
+4. Returns Dinner and Breakfast
+5. Returns
+Dinner
+nil
+
+6. Returns Breakfast because the code within the method deifnitation of meal returns only the string Breakfast given that the return in the first line of the method results in exiting the method.
+7. Returns
+0
+1
+2
+3
+4
+5
+
+8. Returns
+0
+1
+2
+3
+4
+10
+
+9. Returns
+0
+1
+2
+nil
+
+10. Returns 1 (Explanation on LS)

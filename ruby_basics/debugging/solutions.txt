@@ -1,0 +1,13 @@
+1.1 Error message: (irb):1:in `find_first_nonzero_among': wrong number of arguments (given 6, expected 1) (ArgumentError)
+Explanation: The first method invocation raises an ArgumentError on line 1. The error message tells that the method find_first_nonzero_among was given 6 arguments when it takes only 1.
+1.2 Error message: (irb):12:in `find_first_nonzero_among': undefined method `each' for 1:Integer (NoMethodError)
+Explanation: The second method invocation raises a NoMethodError. The error message tells that the method each does not work on integers as intergers do not have an each method.
+2. We need to assign sunshine to boolean literals true and false instead of a string literals true or false.
+3. We can fix the problem by calling to_i on the user input as the default value of a user input will be a string.
+4. Magdalena re-assigned the value to the key :dog. She can solve this by using .push method on the array given that :dog returns an array to ADD the new pet (value) to the key.
+5. The block is using the .map method. .map method transforms in a manner that the new array displays the assigned values for even numbers and nil for odd numbers given that they have been removed. We can instead use .select here which only returns the values that return true for .even?
+6. Because we do not have explicit return statement the method always returns the value returned by the last line in the method. We can fix this by either using explicity return for the if statements or by refactoring the method into a three if statement.
+7. In the original code we simply reassign the value of balance with the latest months data. We can solve this by incremeneting the value of balance by adding a += instead of just an =.
+8. Soltuion on LS.
+9. We are multiplying each iteration with 0. We can solve this by assigning 1 to product instead of 0.
+10. We first need to convert the input string into a symbol by using to_sym given that we are trying to access the value of a key that does not exist in the hash. .merge returns a new hash and does not mutate player, therefore we can use merege! which has a bang suffice which mutates the hash.

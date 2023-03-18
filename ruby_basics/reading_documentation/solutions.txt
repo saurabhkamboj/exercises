@@ -1,0 +1,11 @@
+1. [http://ruby-doc.org](http://ruby-doc.org/)
+2. [while loop](https://ruby-doc.com/core/doc/syntax/control_expressions_rdoc.html#:~:text=in%20the%20expression.-,while%20Loop%C2%B6%20%E2%86%91,-The%20while%20loop)
+3. The result of a `while` loop is `nil` unless `break` is used to supply a value.
+4. `break` returns `nil` when no arguments are passed to `break`, or the value of the argument when an argument is provided.
+5. You can write large numbers by using underscores to separate groups of digits, like so:
+
+1_98_76_54_321
+
+6. Documentation for symbol literals is on the `literals` (or `literals.rdoc`) page.
+7. [https://ruby-doc.org/core-3.1.2/String.html](https://ruby-doc.org/core-3.1.2/String.html)
+8. [.rjust](https://ruby-doc.org/core-3.1.2/String.html#:~:text=rjust(integer%2C%20padstr%3D%27%20%27)%20%E2%86%92%20new_str)
