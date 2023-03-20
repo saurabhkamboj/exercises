@@ -21,11 +21,6 @@
   Example
     - lights_on(5) => [1, 4]
     - lights_on(10) => [1, 4, 9]
-  Data structure
-    - 
-  Algorithm
-    - initiate a lights_hash
-    - 
   Questions?
     - create a separate array for ON and OFF lights? Which are populated or depopulated on each iteration
       - can use Array#delete to remove the number and Array#<< to append the return value
@@ -36,22 +31,45 @@
 
 def initiate_lights_hash(n)
   hash = {}
-  1.upto(n) { |i| hash[i] = 'off' }
+  1.upto(n) { |number| hash[number] = 'OFF' }
   hash
+end
+
+def toggle_lights(lights_hash, counter)
+  lights_hash.each do |light, state|
+    if (light % counter == 0)
+      lights_hash[light] = (state == 'OFF' ? 'ON' : 'OFF')
+    end
+  end
 end
 
 def display_on_lights(n)
   lights_hash = initiate_lights_hash(n)
-  1.upto(n) do |i|
-    lights_hash.each do |key, value|
-      if (key % i == 0)
-        lights_hash[key] = (value == 'off' ? 'on' : 'off')
-      end
-    end
+  1.upto(n) do |counter|
+    toggle_lights(lights_hash, counter)
   end
   
-  lights_hash
+  p lights_hash.select { |light, state| state == 'ON' }.keys
 end
 
-p display_on_lights(5)
-p display_on_lights(10)
+# alternate by Christopher Perkins
+
+def display_on_lights(n)
+  lights_hash = Hash.new(false)
+
+  1.upto(n) do |current_counter|
+    counter = current_counter
+    while counter <= n
+      lights_hash[counter] = !lights_hash[counter]
+      counter += current_counter
+    end
+  end
+
+  p lights_hash.select { |_, state| state }.keys
+end
+
+display_on_lights(5)
+display_on_lights(10)
+
+display_on_lights(5)
+display_on_lights(10)
