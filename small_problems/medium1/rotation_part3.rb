@@ -16,7 +16,7 @@
   - if rotate_right_most can be used, the idea is to determine n
   - we can determine n using Array#length and iterate using Integer#times
     - on each iteration numbers 0...(length - 1) will be assigned to the parameter (i) within the block
-    - n can be determined using 'digits - i'
+    - n can be determined using 'length - i'
 =end
 
 def rotate_array(array)
