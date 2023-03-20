@@ -8,9 +8,9 @@
 
 =begin
   Problem
-    - Shift the digit at -nth position to the end of the integer object
-    - Input => Integer, Output => Integer (New object)
-    - Explicit requirement => Return the original number if only 1 digit is provided as the second argument
+    - shift the digit at -nth position to the end of the integer object
+    - input => Integer, Output => Integer (New object)
+    - explicit requirement => Return the original number if only 1 digit is provided as the second argument
 
   Example
     rotate_rightmost_digits(735291, 1) == 735291
@@ -21,10 +21,10 @@
     rotate_rightmost_digits(735291, 6) == 352917
 
   Algorithm
-    - Using `Integer#digits` convert the digits of the given integer into a array
-    - Reverse the resultant array using `Array#reverse` to get the digits in the desired order
-    - Assign the return value of the invocation of chained method to a variable
-    - Excplitiy return the integer of it contains only 1 digit
+    - using `Integer#digits` convert the digits of the given integer into a array
+    - reverse the resultant array using `Array#reverse` to get the digits in the desired order
+    - assign the return value of the invocation of chained method to a variable
+    - excplitiy return the integer of it contains only 1 digit
 =end
 
 def rotate_array(array)

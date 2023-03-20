@@ -4,10 +4,10 @@
 
 =begin
   Problem
-    - Shift the first element in the array, assign the returned object to a variable, append that variable to the array
-    - Input => Array, Output => New array
-    - Explicit requirement => Do not use Array#rotate or Array#rotate!
-    - Implicit requirement => Do not mutate the original array
+    - shift the first element in the array, assign the returned object to a variable, append that variable to the array
+    - input => Array, Output => New array
+    - explicit requirement => Do not use Array#rotate or Array#rotate!
+    - implicit requirement => Do not mutate the original array
 
   Examples
     rotate_array([7, 3, 5, 2, 9, 1]) == [3, 5, 2, 9, 1, 7]
@@ -19,8 +19,8 @@
     x == [1, 2, 3, 4]                 # => true
 
   Algorithm
-    - Intialise a new variable with the return value array.clone assigne to it
-    - Append the cloned array with the return value of new_array.shift
+    - intialise a new variable with the return value array.clone assigne to it
+    - append the cloned array with the return value of new_array.shift
 =end
 
 def rotate_array(array)
