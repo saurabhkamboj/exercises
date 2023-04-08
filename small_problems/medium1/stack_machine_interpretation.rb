@@ -22,7 +22,8 @@
       - Iterate over elements of the array returned by calling of `#split`
       - Use a conditional to interpret the value of the object at the current iteration
       - Perform an operation based on the value
-
+    
+    # Data structures
       - A variable `stack` has to be intialised with an empty array object assigned to it or can also use #each_with_object to iterate over the array returned by calling of `#split`.
       - `register` has to assigned an interger object with value 0 at the start of the method's definition
     
