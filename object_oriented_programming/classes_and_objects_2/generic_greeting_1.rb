@@ -8,7 +8,7 @@ end
 
 Cat.generic_greeting
 
-# further exploration
+# Further exploration
 
 kitty = Cat.new
 kitty.class.generic_greeting
