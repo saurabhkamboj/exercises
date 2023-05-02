@@ -7,3 +7,8 @@ class Cat
 end
 
 Cat.generic_greeting
+
+# further exploration
+
+kitty = Cat.new
+kitty.class.generic_greeting
