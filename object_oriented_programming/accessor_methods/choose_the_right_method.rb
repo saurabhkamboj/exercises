@@ -9,7 +9,7 @@ class Person
   attr_writer :phone_number
 end
 
-# alternate
+# Alternate
 
 class Person
   def name=(name)
