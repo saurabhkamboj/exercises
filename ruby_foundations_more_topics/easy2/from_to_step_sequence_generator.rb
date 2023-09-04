@@ -37,4 +37,16 @@ def step(start_value, end_value, step_value, &block)
   result
 end
 
-p step(1, 10, 3) { |value| puts "value = #{value}" }
+# Alternate by Alex Bair
+def step(start_value, end_value, step_value, &block)
+  current_value = start_value
+
+  until current_value > end_value
+    yield(current_value)
+    current_value += step_value
+  end
+
+  current_value
+end
+
+step(1, 10, 3) { |value| puts "value = #{value}" }
