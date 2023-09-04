@@ -8,13 +8,11 @@ p compute { 'a' + 'b' } == 'ab'
 p compute == 'Does not compute.'
 
 # Alternate
-
 def compute
   block_given? ? yield : "Does not compute."
 end
 
 # Further exploration
-
 def compute(argument='')
   return "Does not compute." unless block_given?
   yield(argument)

@@ -5,7 +5,6 @@ def divisors(number)
 end
 
 # Further exploration
-
 def divisors(number)
   num = Math.sqrt(number).to_i
   1.upto(num).each_with_object([]) do |n , result|
