@@ -34,14 +34,15 @@ end
 
 # Alternate
 def decrypt(string)
-  string.chars.map do |char|
+  string.chars.map do |encrypted_char|
+    char = encrypted_char.downcase
     result = case char
-    when 'a'..'m', 'A'..'M' then LETTERS.key(LETTERS[char.downcase] + 13)
-    when 'n'..'z', 'N'..'Z' then LETTERS.key(LETTERS[char.downcase] - 13)
+    when 'a'..'m', 'A'..'M' then LETTERS.key(LETTERS[char] + 13)
+    when 'n'..'z', 'N'..'Z' then LETTERS.key(LETTERS[char] - 13)
     else char
     end
 
-    char == char.upcase ? result.upcase : result
+    encrypted_char == encrypted_char.upcase ? result.upcase : result
   end.join
 end
 
