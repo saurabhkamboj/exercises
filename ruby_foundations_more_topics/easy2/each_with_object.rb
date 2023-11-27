@@ -4,7 +4,6 @@ def each_with_object(array, accumulator_object)
 end
 
 # Alternate
-
 def each_with_object(array, accumulator_object)
   for element in array
     yield(element, accumulator_object)
