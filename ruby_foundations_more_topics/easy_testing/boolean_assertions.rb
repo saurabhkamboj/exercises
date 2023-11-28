@@ -2,12 +2,12 @@ require 'minitest/autorun'
 require 'minitest/reporters'
 Minitest::Reporters.use!
 
-# class BooleanTest < Minitest::Test
-#   def test_boolean
-#     value = 4
-#     assert(value.odd?, 'value is not odd')
-#   end
-# end
+class BooleanTest < Minitest::Test
+  def test_boolean
+    value = 4
+    assert(value.odd?, 'value is not odd')
+  end
+end
 
 # Important points
 #   Require 'minitest/autorun'.
