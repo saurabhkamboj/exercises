@@ -1,3 +1,5 @@
+# Write a minitest assertion that will fail if the value.odd? is not true.
+
 require 'minitest/autorun'
 require 'minitest/reporters'
 Minitest::Reporters.use!
@@ -18,9 +20,9 @@ end
 
 # Alternate
 
-# `assert` tests whether the first argument is truthy (That is neither false or nil). If the argument is not truthy, the test fails and the second argument is displayed as the failure message. The message is frequently ommited since the error messages provided by default are usually sufficient.
+# `#assert` tests whether the first argument is truthy (That is neither false or nil). If the argument is not truthy, the test fails and the second argument is displayed as the failure message. The message is frequently ommited since the error messages provided by default are usually sufficient.
 
-# `assert` is mostly not used since it is more important to ensure an exact value is returned. Therefore `asset_equal` is more optimal to be used in this case to test if `true` is returned and not just a truthy value (a value that evaluates as true).
+# `#assert` is mostly not used since it is more important to ensure an exact value is returned. Therefore `#asset_equal` is more optimal to be used in this case to test if `true` is returned and not just a truthy value (a value that evaluates as true).
 
 class BooleanTest < Minitest::Test
   def test_boolean
