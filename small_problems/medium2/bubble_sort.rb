@@ -12,7 +12,7 @@
     - next
     - [3, 4] => 3 > 4 ? false next
     - [4, 5] => 4 > 5 ? false next or break ? break if index of 2nd element = size - 1
-  
+
   Problem
     - Create a loop
     - Iterate through the array and reference sub_arr of length 2 starting from the index of the current element
@@ -32,7 +32,7 @@
 
 def bubble_sort!(arr)
   loop do
-    results = (0..arr.length - 2).map do |index|
+    results = (0...arr.length - 1).map do |index|
       if arr[index] > arr[index + 1]
         arr[index], arr[index + 1] = arr[index + 1], arr[index]
       else
