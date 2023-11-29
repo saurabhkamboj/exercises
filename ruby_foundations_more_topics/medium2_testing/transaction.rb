@@ -9,7 +9,7 @@ class Transaction
     @amount_paid = 0
   end
 
-  def prompt_for_payment(input: $stdin, output: $stdout) # $stdin stands for standard input stream.
+  def prompt_for_payment(input: $stdin, output: $stdout) # $stdin stands for standard input stream, it is a global variant used to represent the default source of input.
     loop do
       output.puts "You owe $#{item_cost}.\nHow much are you paying?"
       @amount_paid = input.gets.chomp.to_f
