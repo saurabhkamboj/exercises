@@ -50,7 +50,32 @@ class Triangle
   end
 
   def legal?
-    (sides.all? { _1 > 0 }) && (sides.sort[0..1].sum > sides.max)
+    sides.all? { _1 > 0 } &&
+    sides.sort[0..1].sum > sides.max
+  end
+
+  def kind
+    case sides.uniq.size
+    when 1 then 'equilateral'
+    when 2 then 'isosceles'
+    else
+    'scalene'
+    end
+  end
+end
+
+# Alternate
+class Triangle
+  attr_reader :sides
+
+  def initialize(side_1, side_2, side_3)
+    @sides = [side_1, side_2, side_3]
+    raise ArgumentError unless legal?
+  end
+
+  def legal?
+    sides.all? { _1 > 0 } &&
+    sides.max < (sides.sum - sides.max)
   end
 
   def kind
