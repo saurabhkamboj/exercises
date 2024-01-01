@@ -1,5 +1,3 @@
-require 'pry'
-
 def bubble_sort!(arr)
   loop do
     swapped = false
