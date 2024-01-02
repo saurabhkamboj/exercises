@@ -18,7 +18,7 @@
     - [20, 7], [1, 5, 10, 50, 100, 500, 1000]
 =end
 
-# Solution by Nick Perry
+# Solution by Patrik Moran
 class RomanNumeral
   def initialize(number)
     self.number = number
