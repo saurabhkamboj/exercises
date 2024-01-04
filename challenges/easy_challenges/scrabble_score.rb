@@ -117,3 +117,36 @@ class Scrabble
     Scrabble.new(word).score
   end
 end
+
+# Alternate 2
+class Scrabble
+  attr_reader :word
+
+  VALUES = { %w(A E I O U L N R S T) =>	1,
+    %w(D G) => 2,
+    %w(B C M P) => 3,
+    %w(F H V W Y) => 4,
+    %w(K) => 5,
+    %w(J X) => 8,
+    %w(Q Z) => 10 }
+
+  def initialize(word_string)
+    @word = word_string ? word_string : ''
+  end
+
+  def score
+    letters = word.upcase.gsub(/\s/,'').chars
+
+    letters.inject(0) do |sum, letter|
+      VALUES.each do |key, value|
+        sum += value if key.include?(letter)
+      end
+
+      sum
+    end
+  end
+
+  def self.score(word)
+    Scrabble.new(word).score
+  end
+end
