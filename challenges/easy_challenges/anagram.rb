@@ -3,17 +3,21 @@
 =begin
   Details
     - Detect anagrams of a given word.
-    - Anagram is a word or a phrase formed by re-arranging the letters of a different word or phrase.
+    - Anagram is a word or a phrase formed by re-arranging
+      the letters of a different word or phrase.
     - The detection is case in-sensitive.
     - Identical words are no anagrams.
 
   Examples
     - An `Anagram` class has to be created. The class should have 2 methods:
-      - A constructor that takes an integer as an argument. The constructor does not raise any errors.
-      - A method that takes an array of strings as argument and returns an array containing anagrams. The name of the method will be `#match`.
+      - A constructor that takes an integer as an argument.
+        The constructor does not raise any errors.
+      - A method that takes an array of strings as argument and returns
+        an array containing anagrams. The name of the method will be `#match`.
 
   Data structures
-    - Input => The input for the constructor method is a string and for `#match` instance method it's an array.
+    - Input => The input for the constructor method is a
+      string and for `#match` instance method it's an array.
     - Output => Array of anagrams
 
   Algortihm
@@ -25,7 +29,8 @@
     - Take an array as an argument.
     - Iterate over each element of the array. On each iteration:
       - Skip iteration is element.downcase == input.downcase
-      - Compare the sorted lower case characters of the current element with sorted characters of input string.
+      - Compare the sorted lower case characters of the current
+        element with sorted characters of input string.
       - Select the element if the comparison returns true.
     - Return the array of selected elements.
 =end
