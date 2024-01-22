@@ -1,21 +1,3 @@
-=begin
-  Breakdown
-    - The song contains 2 lines
-      - Line 1 has 2 types
-        - For 99 to 1
-        - For 0
-      - Line 2 has 3 types
-        - For 2 to 99
-        - For 1
-        - For 0
-
-  Examples
-    - A `BeerSong` class has to be created.
-    - It has a class method `verse`
-      - Which takes an integer object as an argument.
-      - It returns a string object.
-=end
-
 class BeerSong
   def self.verse(bottle1, bottle2 = nil)
     bottles = bottle2 ? (bottle2..bottle1).to_a.reverse : [bottle1]
