@@ -33,14 +33,14 @@ class Clock
   end
 
   def +(new_minutes)
-    minutes = self.total_minutes + new_minutes
+    minutes = total_minutes + new_minutes
     (minutes %= 1440) if minutes > 1440
 
     compute_time(minutes)
   end
 
   def -(new_minutes)
-    minutes = self.total_minutes - new_minutes
+    minutes = total_minutes - new_minutes
     (minutes %= 1440) if minutes < 0
 
     compute_time(minutes)
