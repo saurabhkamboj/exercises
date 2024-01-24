@@ -33,19 +33,17 @@ class Clock
   end
 
   def +(new_minutes)
-    total_minutes = (hour_hand * 60) + minute_hand + new_minutes
-    (total_minutes %= 1440) if total_minutes > 1440
+    minutes = self.total_minutes + new_minutes
+    (minutes %= 1440) if minutes > 1440
 
-    hour_input, minute_input = total_minutes.divmod(60)
-    Clock.new(hour_input, minute_input)
+    compute_time(minutes)
   end
 
   def -(new_minutes)
-    total_minutes = (hour_hand * 60) + minute_hand - new_minutes
-    (total_minutes %= 1440) if total_minutes < 0
+    minutes = self.total_minutes - new_minutes
+    (minutes %= 1440) if minutes < 0
 
-    hour_input, minute_input = total_minutes.divmod(60)
-    Clock.new(hour_input, minute_input)
+    compute_time(minutes)
   end
 
   def to_s
@@ -66,5 +64,14 @@ class Clock
   def initialize(hour_input, minute_input)
     @hour_hand = hour_input
     @minute_hand = minute_input
+  end
+
+  def total_minutes
+    (hour_hand * 60) + minute_hand
+  end
+
+  def compute_time(minutes)
+    hour_input, minute_input = minutes.divmod(60)
+    Clock.new(hour_input, minute_input)
   end
 end
