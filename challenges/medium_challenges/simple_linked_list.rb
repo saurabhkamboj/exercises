@@ -47,9 +47,8 @@ class SimpleLinkedList
   end
 
   def self.from_a(array)
-    array = array.nil? ? [] : array.reverse
-    new_list = SimpleLinkedList.new
-    array.each_with_object(new_list) do |element, list|
+    array = (array.nil? ? [] : array.reverse)
+    array.each_with_object(new) do |element, list|
       list.push(element)
     end
   end
