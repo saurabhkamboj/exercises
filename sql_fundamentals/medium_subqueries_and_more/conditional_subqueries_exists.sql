@@ -1,5 +1,5 @@
 SELECT name FROM bidders WHERE EXISTS
-  (SELECT bidder_id FROM bids
+  (SELECT FROM bids
     WHERE bidder_id = bidders.id);
 
 -- Further exploration
