@@ -11,9 +11,9 @@ function substrings(string) {
 
 // Further exploration
 function substrings(string) {
-  return [...string].map((_, index1) => {
+  return [...string].flatMap((_, index1) => {
     let substring = string.slice(index1);
-    return [...substring].flatMap((_, index2) => substring.slice(0, index2 + 1))
+    return [...substring].map((_, index2) => substring.slice(0, index2 + 1))
   })
 }
 
