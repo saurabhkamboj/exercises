@@ -4,7 +4,7 @@ function searchWord(matchWord, string) {
   let regex = new RegExp(matchWord, 'gi');
   let matches = string.match(regex);
 
-  return matches.length ? matches : 0;
+  return matches ? matches.length : 0;
 }
 
 // Further exploration
