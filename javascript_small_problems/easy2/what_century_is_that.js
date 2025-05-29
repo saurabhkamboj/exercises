@@ -1,6 +1,5 @@
 function century(year) {
   let string = String(year);
-  if (string.length <= 2) return '1st';
 
   let newCentury = string.slice(-2) !== '00';
   let century = Number(string.slice(0, string.length - 2)) + (newCentury ? 1 : 0);
@@ -10,7 +9,7 @@ function century(year) {
 
 function suffix(century) {
   let lastTwo = Number(century.slice(-2));
-  if (lastTwo >= 11 || lastTwo <= 13) {
+  if (lastTwo >= 11 && lastTwo <= 13) {
     return 'th';
   }
 
