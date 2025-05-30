@@ -35,5 +35,3 @@ console.log(findFibonacciIndexByLength(16n) === 74n);
 console.log(findFibonacciIndexByLength(100n) === 476n);
 console.log(findFibonacciIndexByLength(1000n) === 4782n);
 console.log(findFibonacciIndexByLength(10000n) === 47847n);
-
-// The last example may take a minute or so to run.
