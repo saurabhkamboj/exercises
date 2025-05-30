@@ -14,6 +14,23 @@ function bubbleSort(array) {
   } while (swapped)
 }
 
+// Optimization recommendation by LSBot
+function bubbleSort(array) {
+  let size = array.length;
+  let last_swap;
+
+  do {
+    last_swap = 0;
+    for (let index = 1; index < size; index += 1) {
+      if (array[index - 1] > array[index]) {
+        [array[index - 1], array[index]] = [array[index], array[index - 1]];
+        last_swap = index;
+      }
+    }
+    size = last_swap;
+  } while (last_swap > 0)
+}
+
 const array1 = [5, 3];
 bubbleSort(array1);
 console.log(array1);    // [3, 5]
